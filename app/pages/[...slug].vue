@@ -11,19 +11,30 @@
 </script>
 
 <template>
-  <main>
+  <main class="grid gap-4 max-w-5xl mx-auto content">
     <div class="flex items-center space-x-4">
       <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">{{ page.title }}</h1>
     </div>
 
-    <Card class="max-w-7xl mx-auto">
-      <CardContent>
-        <!-- <pre>{{ page }}</pre> -->
-        <ContentRenderer
-          v-if="page"
-          :value="page"
-        />
-      </CardContent>
-    </Card>
+    <!-- <pre>{{ page }}</pre> -->
+    <div class="rendered-content">
+      <ContentRenderer
+        v-if="page"
+        :value="page"
+      />
+    </div>
   </main>
 </template>
+
+<style>
+  .rendered-content h1 {
+    display: none;
+  }
+  .rendered-content p {
+    margin-bottom: 1rem;
+  }
+
+  .rendered-content .alert p {
+    margin-bottom: 0;
+  }
+</style>
