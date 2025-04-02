@@ -4,7 +4,7 @@ navigation:
   icon: paper
 ---
 
-# Workout Nutrition page
+# Workout Nutrition
 
 Let's break down two essential nutrients often subject to misconceptions: carbohydrates and fats. These are the backbone of your body's energy system, quietly keeping you fueled for daily activities.
 
