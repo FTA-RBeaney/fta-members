@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   compatibilityDate: "2024-04-03",
-  modules: ["shadcn-nuxt"],
   shadcn: {
     /**
      * Prefix for all the imported component
