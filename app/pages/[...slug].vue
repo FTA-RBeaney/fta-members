@@ -14,12 +14,11 @@
   <main>
     <div class="flex items-center space-x-4">
       <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">{{ page.title }}</h1>
-      <!---->
     </div>
 
     <Card class="max-w-7xl mx-auto">
       <CardContent>
-        <pre>{{ page }}</pre>
+        <!-- <pre>{{ page }}</pre> -->
         <ContentRenderer
           v-if="page"
           :value="page"
