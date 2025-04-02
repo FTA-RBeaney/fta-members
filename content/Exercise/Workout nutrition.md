@@ -1,7 +1,7 @@
 ---
 navigation:
   title: Workout nutrition
-  icon: paper
+  icon: RocketIcon
 ---
 
 # Workout Nutrition page

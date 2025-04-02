@@ -1,6 +1,4 @@
-<script setup lang="ts">
-  import type { SidebarProps } from "@/components/ui/sidebar";
-
+<script setup>
   import {
     AudioWaveform,
     BookOpen,
@@ -10,12 +8,17 @@
     GalleryVerticalEnd,
     Map,
     PieChart,
+    RocketIcon,
     Settings2,
     SquareTerminal,
   } from "lucide-vue-next";
 
-  const props = withDefaults(defineProps<SidebarProps>(), {
+  const props = withDefaults(defineProps(), {
     collapsible: "icon",
+  });
+
+  const { data: exerciseData } = await useAsyncData("navigation", () => {
+    return queryCollectionNavigation("exercises");
   });
 
   // This is sample data.
@@ -23,7 +26,7 @@
     user: {
       name: "shadcn",
       email: "m@example.com",
-      avatar: "/avatars/shadcn.jpg",
+      avatar: "",
     },
     teams: [
       {
@@ -44,9 +47,9 @@
     ],
     navMain: [
       {
-        title: "Playground",
+        title: "Getting started",
         url: "#",
-        icon: SquareTerminal,
+        icon: RocketIcon,
         isActive: true,
         items: [
           {
@@ -155,8 +158,18 @@
       <TeamSwitcher :teams="data.teams" />
     </SidebarHeader>
     <SidebarContent>
-      <NavMain :items="data.navMain" />
-      <NavProjects :projects="data.projects" />
+      <SidebarGroup>
+        <SidebarGroupLabel>Courses</SidebarGroupLabel>
+        <NavMain
+          navTitle="Exercise"
+          :items="exerciseData"
+        />
+        <NavMain
+          navTitle="Nutrition"
+          :items="exerciseData"
+        />
+        <NavProjects :projects="data.projects" />
+      </SidebarGroup>
     </SidebarContent>
     <SidebarFooter>
       <NavUser :user="data.user" />
