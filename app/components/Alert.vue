@@ -4,7 +4,6 @@
     :style="{ 'border-color': color }"
   >
     <slot></slot>
-    <Button>Click me</Button>
   </div>
 </template>
 
