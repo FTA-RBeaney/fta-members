@@ -12,6 +12,8 @@ slug: how-to-progress
 
 # Progressive Overload
 
+![deadlift.jpg](/deadlift.jpg)
+
 The most important principle that we must follow with our training is the Principle of Progressive Overload.
 
 Progressive Overload is simply the idea that over time we should increase the amount of work we do over time, primarily in the form of volume.
