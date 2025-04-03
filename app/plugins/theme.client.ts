@@ -60,11 +60,11 @@ export default defineNuxtPlugin((nuxtApp) => {
     };
 
     // Initial theme setup
-    updateTheme(config.ui.primary as ColorName);
+    updateTheme(config.ui.colors.primary as ColorName);
 
     // Watch for changes
     watch(
-      () => config.ui.primary,
+      () => config.ui.colors.primary,
       (newColor: ColorName) => {
         updateTheme(newColor);
       }
