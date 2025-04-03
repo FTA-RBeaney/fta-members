@@ -2,5 +2,9 @@ export default defineAppConfig({
   ui: {
     primary: "emerald",
     gray: "slate",
+
+    colors: {
+      primary: "rose",
+    },
   },
 });
