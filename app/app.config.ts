@@ -17,8 +17,8 @@ export default defineAppConfig({
 
   header: {
     logo: {
-      light: "/jazzerz.jpg",
-      dark: "/jazzerz.jpg",
+      light: "/logo.png",
+      dark: "/logo.png",
     },
   },
 });

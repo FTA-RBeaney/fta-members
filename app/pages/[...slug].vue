@@ -1,4 +1,8 @@
 <script setup>
+  const appConfig = useAppConfig();
+
+  console.log(appConfig.ui);
+
   const route = useRoute();
 
   const { data: page } = await useAsyncData("page-" + route.path, () => {
@@ -13,6 +17,11 @@
 <template>
   <main class="grid gap-4 max-w-5xl mx-auto content">
     <div class="flex items-center space-x-4">
+      <Icon
+        :name="appConfig.ui.icons.search"
+        style="color: black"
+        size="24px"
+      />
       <h1 class="scroll-m-20 text-3xl font-bold tracking-tight">{{ page.title }}</h1>
     </div>
 

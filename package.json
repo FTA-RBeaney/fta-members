@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^3.4.0",
+    "@nuxt/icon": "^1.11.0",
     "@tailwindcss/vite": "^4.1.1",
     "@vueuse/core": "^13.0.0",
     "class-variance-authority": "^0.7.1",

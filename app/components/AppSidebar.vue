@@ -13,6 +13,8 @@
     Settings2,
     SquareTerminal,
   } from "lucide-vue-next";
+  const appConfig = useAppConfig();
+  const siteLogo = appConfig.header.logo.light;
 
   const props = withDefaults(defineProps(), {
     collapsible: "icon",
@@ -31,18 +33,18 @@
     },
     teams: [
       {
-        name: "Acme Inc",
-        logo: GalleryVerticalEnd,
+        name: "FTA",
+        logo: siteLogo,
         plan: "Enterprise",
       },
       {
         name: "Acme Corp.",
-        logo: AudioWaveform,
+        logo: siteLogo,
         plan: "Startup",
       },
       {
         name: "Evil Corp.",
-        logo: Command,
+        logo: siteLogo,
         plan: "Free",
       },
     ],
