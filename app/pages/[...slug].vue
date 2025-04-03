@@ -30,7 +30,24 @@
   .rendered-content h1 {
     display: none;
   }
+
+  .rendered-content hr {
+    margin: 1rem 0;
+  }
+
   .rendered-content p {
+    margin-bottom: 1rem;
+  }
+
+  .rendered-content h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .rendered-content ul {
+    list-style-type: disc;
+    padding-left: 1rem;
     margin-bottom: 1rem;
   }
 

@@ -27,6 +27,7 @@
 
   defineProps<{
     navTitle: string;
+    icon: LucideIcon;
     items: {
       title: string;
       url: string;
@@ -47,16 +48,16 @@
       :key="item.title"
       as-child
       :default-open="item.isActive"
-      class="group/collapsible"
+      class="group collapsible"
     >
       <SidebarMenuItem>
         <CollapsibleTrigger as-child>
           <SidebarMenuButton :tooltip="item.title">
             <component
-              :is="item.icon"
-              v-if="item.icon"
+              :is="icon"
+              v-if="icon"
             />
-            <RocketIcon />
+            <!-- <RocketIcon /> -->
             <span> {{ navTitle }}</span>
             <ChevronRight class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
           </SidebarMenuButton>
@@ -67,10 +68,13 @@
               v-for="subItem in item.children"
               :key="subItem.title"
             >
-              <SidebarMenuSubButton as-child>
-                <a :href="subItem.path">
+              <SidebarMenuSubButton
+                as-child
+                :is-active="item.isActive"
+              >
+                <NuxtLink :to="subItem.path">
                   <span>{{ subItem.title }}</span>
-                </a>
+                </NuxtLink>
               </SidebarMenuSubButton>
             </SidebarMenuSubItem>
           </SidebarMenuSub>
@@ -79,3 +83,10 @@
     </Collapsible>
   </SidebarMenu>
 </template>
+
+<style scoped>
+  .router-link-active {
+    background: hsl(240 4.8% 95.9%);
+    color: hsl(240 5.9% 10%);
+  }
+</style>

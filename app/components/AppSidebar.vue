@@ -9,6 +9,7 @@
     Map,
     PieChart,
     RocketIcon,
+    Apple,
     Settings2,
     SquareTerminal,
   } from "lucide-vue-next";
@@ -162,10 +163,12 @@
         <SidebarGroupLabel>Courses</SidebarGroupLabel>
         <NavMain
           navTitle="Exercise"
+          :icon="RocketIcon"
           :items="exerciseData"
         />
         <NavMain
           navTitle="Nutrition"
+          :icon="Apple"
           :items="exerciseData"
         />
         <NavProjects :projects="data.projects" />
